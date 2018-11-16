@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ping Pong Elo Calculator</title>
+</head>
+
+<body>
+    <script>
+        //Obtention du score du gagnant et parseInt
+        var winner = prompt('ELO du gagnant');
+        winner = parseInt(winner);
+        
+        //Obention du score du perdant et parseInt
+        var loser = prompt('ELO du perdant');
+        loser = parseInt(loser);
+        
+        //Calcul du nouvel ELO
+        if (winner > loser){
+            var newEloWinner = winner + 1/(Math.abs(winner - loser));
+            var newEloLoser = loser - 1/(Math.abs(winner - loser));
+        }
+        else if (winner < loser){
+            var newEloWinner = winner + Math.abs(winner - loser);
+            var newEloLoser = loser - Math.abs(winner - loser);
+        }
+        else {
+            var newEloWinner = winner;
+            var newEloLoser = loser;
+        };
+        
+        //Affichage du résultat
+        alert('Nouvel ELO du vainqueur: ' + newEloWinner + '\nNouvel ELO du perdant: ' + newEloLoser);
+    </script>
+</body>
+</html>
