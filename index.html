@@ -20,8 +20,8 @@
             var newEloLoser = loser - 2/((Math.abs(winner)) - ((Math.abs(loser))));
         }
         else if (winner < loser){
-            var newEloWinner = winner + ((Math.abs(winner)) - ((Math.abs(loser))))*0.5;
-            var newEloLoser = loser - ((Math.abs(winner)) - ((Math.abs(loser))))*0.5;
+            var newEloWinner = winner - ((Math.abs(winner)) - ((Math.abs(loser))))*0.5;
+            var newEloLoser = loser + ((Math.abs(winner)) - ((Math.abs(loser))))*0.5;
         }
         else {
             var newEloWinner = winner;
