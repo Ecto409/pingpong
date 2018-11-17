@@ -16,8 +16,8 @@
         
         //Calcul du nouvel ELO
         if (winner > loser){
-            var newEloWinner = winner + 1/((Math.abs(winner)) - ((Math.abs(loser))));
-            var newEloLoser = loser - 1/((Math.abs(winner)) - ((Math.abs(loser))));
+            var newEloWinner = winner + 2/((Math.abs(winner)) - ((Math.abs(loser))));
+            var newEloLoser = loser - 2/((Math.abs(winner)) - ((Math.abs(loser))));
         }
         else if (winner < loser){
             var newEloWinner = winner - ((Math.abs(winner)) - ((Math.abs(loser))))*0.5;
