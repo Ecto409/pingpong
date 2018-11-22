@@ -21,8 +21,8 @@
             var newEloLoser = loser - 2/(2+(winner - loser));
             }
         else if (winner < loser){
-            var newEloWinner = winner - (winner - loser)*0.65;
-            var newEloLoser = loser + (winner - loser)*0.65;
+            var newEloWinner = winner - (winner - loser)*0.55;
+            var newEloLoser = loser + (winner - loser)*0.55;
             }
         else {
             var newEloWinner = winner + winner*0.2;
