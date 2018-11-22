@@ -18,15 +18,15 @@
         if (winner > loser){
             var newEloWinner = winner + 2/(winner - loser);
             var newEloLoser = loser - 2/(winner - loser);
-        }
+            }
         else if (winner < loser){
             var newEloWinner = winner - (winner - loser)*0.5;
             var newEloLoser = loser + (winner - loser)*0.5;
-        }
+            }
         else {
             var newEloWinner = winner;
             var newEloLoser = loser;
-        };
+            };
         
         //Affichage du résultat
         alert('Nouvel ELO du vainqueur: ' + newEloWinner + '\nNouvel ELO du perdant: ' + newEloLoser);
