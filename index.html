@@ -9,9 +9,11 @@
         
         //Obtention du score du gagnant et parseInt
         var winner = prompt('ELO du gagnant');
+        winner = parseInt(winner);
         
         //Obention du score du perdant et parseInt
         var loser = prompt('ELO du perdant');
+        loser = parseInt(loser);
         
         //Calcul du nouvel ELO
         if (winner > loser){
